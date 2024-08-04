@@ -1,5 +1,7 @@
 FROM golang AS builder
 
+ENV CGO_ENABLED=0 GO111MODUL=on
+
 WORKDIR /build
 
 ADD go.mod .
@@ -12,7 +14,7 @@ FROM alpine
 ARG CONFIG_PATH
 ENV CONFIG_PATH=$CONFIG_PATH
 
-EXPOSE 9000
+EXPOSE 8400
 
 WORKDIR /build
 

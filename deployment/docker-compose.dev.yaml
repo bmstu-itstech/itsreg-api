@@ -3,14 +3,13 @@ services:
     build:
       context: ../
       args:
-        GITHUB_TOKEN: ${GITHUB_TOKEN}
         CONFIG_PATH: config/dev.yaml
     container_name: reg-api
     ports:
-      - "9000:9000"
+      - "8400:8400"
     networks:
-      - web-api
+      - reg-web-api
 
 networks:
-  web-api:
+  reg-web-api:
     driver: bridge
