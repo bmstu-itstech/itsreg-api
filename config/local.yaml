@@ -1,0 +1,15 @@
+env: local
+server:
+  host: localhost
+  port: 9000
+  timeout: 5s
+  idle_timeout: 10s
+auth:
+  host: localhost
+  port: 40001
+bots:
+  host: localhost
+  port: 40002
+tg:
+  host: localhost
+  port: 40003

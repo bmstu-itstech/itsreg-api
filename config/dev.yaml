@@ -1,0 +1,15 @@
+env: local
+server:
+  host: 0.0.0.0
+  port: 9000
+  timeout: 5s
+  idle_timeout: 10s
+auth:
+  host: reg-auth
+  port: 40001
+bots:
+  host: reg-bots
+  port: 40002
+tg:
+  host: reg-tg
+  port: 40003

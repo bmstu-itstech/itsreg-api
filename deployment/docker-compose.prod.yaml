@@ -1,0 +1,16 @@
+services:
+  api:
+    build:
+      context: ../
+      args:
+        GITHUB_TOKEN: ${GITHUB_TOKEN}
+        CONFIG_PATH: config/prod.yaml
+    container_name: reg-api
+    ports:
+      - "9000:9000"
+    networks:
+      - web-api
+
+networks:
+  web-api:
+    driver: bridge
